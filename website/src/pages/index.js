@@ -4,17 +4,24 @@ import { format } from "date-fns"
 import React from "react"
 import {
   BodyCopy,
+  Contact,
   ContentContainer,
   HomeBanner,
   PageMain,
-  Teaser,
-  ServiceCardContainer,
   ServiceCard,
-  Contact,
+  ServiceCardContainer,
+  Teaser,
 } from "relashing"
 import "../styles/styles.scss"
 
 const Homepage = () => (
+  <>
+   <Helmet>
+    <html lang="en" />
+    <meta charSet="utf-8" />
+    <title>Relashe Ltd - A digital partner and builder for Web Development</title>
+    <link rel="canonical" href="http://mysite.com/example" />
+  </Helmet>
   <PageMain>
     <HomeBanner
       title="Relashe,"
@@ -41,7 +48,7 @@ const Homepage = () => (
           We provide the digital insight and knowledge to transform ideas,
           concepts and brands into creative, interactive and engaging digital
           experiences. This insight can be translated into building websites,
-          online platforms and other elements your clients require.
+          online platforms and other products your clients require.
         </p>
         <p>
           As well as helping you reach your consumers, we help other digitally
@@ -124,6 +131,7 @@ const Homepage = () => (
       className="scheme--brand-blue-light"
     />
   </PageMain>
+  </>
 )
 
 export default Homepage
